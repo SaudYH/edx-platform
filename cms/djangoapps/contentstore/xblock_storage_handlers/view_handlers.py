@@ -891,7 +891,6 @@ def _duplicate_block(
 
 
 @login_required
-@expect_json
 def delete_item(request, usage_key):
     """
     Exposes internal helper method without breaking existing bindings/dependencies
