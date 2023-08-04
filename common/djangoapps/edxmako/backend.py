@@ -55,7 +55,7 @@ class Mako(BaseEngine):
         try:
             return Template(lookup_template(self.namespace, template_name), engine=self)
         except TopLevelLookupException:
-            raise TemplateDoesNotExist(template_name)  # lint-amnesty, pylint: disable=raise-missing-from
+            raise TemplateDoesNotExist(self.namespace + ' ' + template_name)  # lint-amnesty, pylint: disable=raise-missing-from
 
     @cached_property
     def template_context_processors(self):

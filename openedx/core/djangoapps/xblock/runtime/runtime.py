@@ -265,8 +265,8 @@ class XBlockRuntime(RuntimeShim, Runtime):
                 deprecated_anonymous_user_id=deprecated_anonymous_student_id
             )
         elif service_name == "mako":
-            if self.system.student_data_mode == StudentDataMode.Ephemeral:
-                return MakoService(namespace_prefix='lms.')
+            # if self.system.student_data_mode == StudentDataMode.Ephemeral:
+            #     return MakoService(namespace_prefix='lms.')
             return MakoService()
         elif service_name == "i18n":
             return XBlockI18nService(block=block)
